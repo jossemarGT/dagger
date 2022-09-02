@@ -81,6 +81,17 @@ module.exports = {
     },
     posthog: {
       apiKey: "phc_hqwS484sDJhTnrPCANTyWX48nKL3AEucgf6w0czQtQi",
+    },
+    imageZoom: {
+      selector: '.markdown img',
+      // Optional medium-zoom options
+      // see: https://www.npmjs.com/package/medium-zoom#options
+      options: {
+        margin: 24,
+        background: '#BADA55',
+        scrollOffset: 0,
+        container: '.zoom-container'
+      },
     }
   },
   presets: [
@@ -110,6 +121,7 @@ module.exports = {
     "docusaurus-plugin-sass",
     "docusaurus2-dotenv",
     "posthog-docusaurus",
+    "plugin-image-zoom",
     path.resolve(__dirname, "plugins/docusaurus-plugin-hotjar"),
     path.resolve(__dirname, "plugins/docusaurus-plugin-dagger-version"),
   ],
